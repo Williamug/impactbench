@@ -1,0 +1,25 @@
+# Binaries
+impactbench
+impactbench.exe
+*.bin
+
+# Dependency directories
+vendor/
+
+# Storage files
+*.db
+*.db.json
+.impactbench/data/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Test related
+*.test
+*.out
