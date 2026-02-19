@@ -5,6 +5,7 @@ impactbench.exe
 
 # Dependency directories
 vendor/
+dist
 
 # Storage files
 *.db
