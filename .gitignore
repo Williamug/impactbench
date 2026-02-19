@@ -1,6 +1,6 @@
 # Binaries
-impactbench
-impactbench.exe
+/impactbench
+/impactbench.exe
 *.bin
 
 # Dependency directories
