@@ -18,7 +18,7 @@ func NewLoadEngine(adapter runner.Adapter) *LoadEngine {
 }
 
 func (e *LoadEngine) Run(target string, users int, duration time.Duration) (models.Metrics, error) {
-	results := make(chan models.Metrics, 1000)
+	results := make(chan models.Metrics, 10000)
 	var wg sync.WaitGroup
 	stop := make(chan struct{})
 
@@ -34,10 +34,18 @@ func (e *LoadEngine) Run(target string, users int, duration time.Duration) (mode
 				default:
 					metrics, err := e.adapter.Benchmark(target)
 					if err == nil {
-						results <- metrics
+						// Non-blocking send or larger buffer to prevent worker hang
+						select {
+						case results <- metrics:
+						default:
+							// Drop if buffer full to avoid blocking and skewing duration
+						}
 					} else {
-						results <- models.Metrics{
+						select {
+						case results <- models.Metrics{
 							Errors: models.ErrorMetrics{ErrorRatePercent: 100.0},
+						}:
+						default:
 						}
 					}
 				}
