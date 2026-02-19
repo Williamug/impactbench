@@ -32,6 +32,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Debug structure
+        run: ls -R
+
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
@@ -39,4 +42,4 @@ jobs:
           cache: false
 
       - name: Build CLI
-        run: go build -v -o impactbench ./cmd/impactbench/main.go
+        run: go build -v -o impactbench ./cmd/impactbench
