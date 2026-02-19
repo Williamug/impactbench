@@ -1,6 +1,6 @@
 # ImpactBench 🚀
 
-[![Test and Build](https://github.com/williamug/impactbench/actions/workflows/test.yml/badge.svg)](https://github.com/williamug/impactbench/actions/workflows/test.yml)
+[![Test and Build](https://github.com/Williamug/impactbench/actions/workflows/test.yml/badge.svg)](https://github.com/Williamug/impactbench/actions/workflows/test.yml)
 [![Go Version](https://img.shields.io/github/go-mod/go-version/williamug/impactbench)](https://go.dev/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
