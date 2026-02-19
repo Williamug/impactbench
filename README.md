@@ -1,4 +1,4 @@
-# ImpactBench 🚀
+# ImpactBench
 
 [![Test and Build](https://github.com/Williamug/impactbench/actions/workflows/test.yml/badge.svg)](https://github.com/Williamug/impactbench/actions/workflows/test.yml)
 [![Go Version](https://img.shields.io/github/go-mod/go-version/williamug/impactbench)](https://go.dev/)
@@ -6,9 +6,8 @@
 
 **ImpactBench** is a global CLI tool designed for engineering teams to quantify the impact of their changes. It combines benchmarking, load testing, and regression-aware performance analysis to ensure that every refactor or optimization is backed by measurable data.
 
----
 
-## 🌟 Key Features
+## Key Features
 
 - **Global CLI**: Single binary implementation for seamless performance auditing.
 - **Multi-Level Config**: Intelligent merging of global, project-specific, and default configurations.
@@ -19,7 +18,7 @@
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ### From Source
 ```bash
@@ -31,7 +30,7 @@ sudo mv impactbench /usr/local/bin/
 
 ---
 
-## 🛠 Usage
+## Usage
 
 ### 1. Simple Benchmark
 Capture performance metrics for a single URL.
@@ -59,7 +58,7 @@ impactbench review --fail-on-regression
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 ImpactBench uses a hierarchical configuration system (Viper):
 1. **Default**: Hardcoded fallbacks.
@@ -83,7 +82,7 @@ load_test:
 
 ---
 
-## 🏛 Architecture
+## Architecture
 
 Built with a modular, adapter-based architecture:
 - **CLI Layer**: Cobra-based command handling.
@@ -94,7 +93,7 @@ Built with a modular, adapter-based architecture:
 
 ---
 
-## 🧪 Testing
+## Testing
 
 Run the comprehensive test suite to verify internal logic:
 ```bash
@@ -105,10 +104,7 @@ The CI/CD pipeline (GitHub Actions) automatically verifies tests and builds on e
 
 ---
 
-## 📄 License
+## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
----
-
-*ImpactBench is an internal tool designed by Nugsoft Engineering.*
