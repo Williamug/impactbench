@@ -16,8 +16,8 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
-          go-version: '1.22'
-          cache: true
+          go-version: '1.23'
+          cache: false
 
       - name: Install dependencies
         run: go mod tidy
@@ -35,8 +35,8 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
-          go-version: '1.22'
-          cache: true
+          go-version: '1.23'
+          cache: false
 
       - name: Build CLI
-        run: go build -v -o impactbench ./cmd/impactbench
+        run: go build -v -o impactbench ./cmd/impactbench/main.go
